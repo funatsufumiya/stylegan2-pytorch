@@ -1,3 +1,7 @@
+# Usage (How to generate interpolation movie):
+#   python generate-interp.py --size 512 --pics 5 --steps 30 --ckpt checkpoint/009200.pt
+#   ffmpeg -r 25 -i sample-interp/%06d.png -c:v libx264 -vf fps=25 -pix_fmt yuv420p sample-interp-9200.mp4
+
 import argparse
 
 import torch
